@@ -1,0 +1,100 @@
+.banner {
+  background-color: #2c3e50;
+  padding: 40px;
+  text-align: center;
+}
+.banner h1 {
+  color: #9b59b6;
+  font-size: 28px;
+}
+.banner p {
+  color: #ffffff;
+  margin-top: 10px;
+}
+.banner button {
+  background-color: #9b59b6;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.banner button:hover {
+  background-color: rgb(127.949790795, 67.1966527197, 152.8033472803);
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #9b59b6;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card {
+  background-color: #ffffff;
+  color: #333333;
+  padding: 30px;
+  margin: 15px;
+}
+
+body.dark-theme {
+  background-color: #121212 !important;
+  color: #ffffff !important;
+}
+body.dark-theme .banner {
+  background-color: #1f1f1f;
+}
+body.dark-theme .card {
+  background-color: #242424;
+  color: #ffffff;
+}
+
+.todo-box {
+  max-width: 450px;
+  margin: 30px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.todo-box .todo-input-group {
+  display: flex;
+  gap: 10px;
+}
+.todo-box .todo-input-group input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.todo-box ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+.todo-box ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9f9f9;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  border-left: 4px solid #27ae60;
+}
+.todo-box ul li button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.todo-box ul li button:hover {
+  background-color: #c0392b;
+}/*# sourceMappingURL=main.css.map */

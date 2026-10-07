@@ -1,0 +1,129 @@
+// 1. ایک نیا Mixin بنائیں (Flexbox کو بیچ میں لانے کا شارٹ کٹ)
+@mixin center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// 2. کارڈز کی اسٹائلنگ کا Mixin
+@mixin cool-box($border-color) {
+  border: 2px solid $border-color;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px); // ماؤس اوپر لانے پر کارڈ تھوڑا سا اوپر اٹھے گا
+  }
+}
+
+// 1. Variables (رنگوں کو ایک نام میں محفوظ کریں)
+//$primary-color: #e67e22; // نارنجی رنگ
+$primary-color: #9b59b6;
+
+$bg-color: #2c3e50; // گہرا نیلا
+$text-color: #ffffff;
+
+// 2. Nesting (ایک ڈبے کے اندر دوسرا ڈبہ)
+.banner {
+  background-color: $bg-color;
+  padding: 40px;
+  text-align: center;
+
+  h1 {
+    color: $primary-color;
+    font-size: 28px;
+  }
+
+  p {
+    color: $text-color;
+    margin-top: 10px;
+  }
+
+  button {
+    background-color: $primary-color;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    // ماؤس لانے پر (Pseudo-class nesting)
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}
+.card {
+  @include center-flex; // 3 لائنوں کا کام ایک لائن میں
+  @include cool-box($primary-color); // خودکار سایہ، بارڈر اور اینیمیشن
+  background-color: #ffffff;
+  color: #333333;
+  padding: 30px;
+  margin: 15px;
+}
+// جب ڈارک موڈ کلاس آن ہوگی
+body.dark-theme {
+  background-color: #121212 !important;
+  color: #ffffff !important;
+
+  .banner {
+    background-color: #1f1f1f;
+  }
+
+  .card {
+    background-color: #242424;
+    color: #ffffff;
+  }
+}
+
+.todo-box {
+  max-width: 450px;
+  margin: 30px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  .todo-input-group {
+    display: flex;
+    gap: 10px;
+
+    input {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #f9f9f9;
+      padding: 10px;
+      margin-bottom: 8px;
+      border-radius: 5px;
+      border-left: 4px solid #27ae60;
+
+      button {
+        background-color: #e74c3c;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 4px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #c0392b;
+        }
+      }
+    }
+  }
+}

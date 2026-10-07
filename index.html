@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="main.css" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- نیویگیشن بار -->
+    <nav class="navbar">
+      <div class="logo">میرا پورٹ فولیو</div>
+      <ul class="nav-links">
+        <li><a href="#home">ہوم</a></li>
+        <li><a href="#services">سروسز</a></li>
+        <li><a href="#about">ہمارے بارے میں</a></li>
+        <li><a href="#contact">رابطہ کریں</a></li>
+      </ul>
+    </nav>
+    <button id="theme-btn">ڈارک موڈ آن کریں 🌙</button>
+
+    <div class="banner">
+      <h1>جدید ویب ٹیکنالوجیز میں خوش آمدید</h1>
+      <p>ہم SASS کے ذریعے تیز اور خوبصورت ڈیزائن تیار کر رہے ہیں۔</p>
+      <button>مزید جانیں</button>
+    </div>
+
+    <hr />
+    <h2>ہم سے رابطہ کریں (Contact Form)</h2>
+    <h2>ہماری سروسز (Flexbox ڈیمو)</h2>
+
+    <div class="services-container">
+      <div class="card">ویب ڈیزائننگ</div>
+      <div class="card">ویب ڈویلپمنٹ</div>
+      <div class="card">ایپ ڈویلپمنٹ</div>
+    </div>
+
+    <hr />
+    <div class="todo-box">
+      <h2>میری روزانہ کی ٹاسک لسٹ</h2>
+      <div class="todo-input-group">
+        <input
+          type="text"
+          id="task-input"
+          placeholder="نیا کام یہاں لکھیں..."
+        />
+        <button id="add-task-btn">کام شامل کریں</button>
+      </div>
+      <ul id="task-list">
+        <!-- جاوا اسکرپٹ کے ذریعے یہاں کام شامل ہوں گے -->
+      </ul>
+    </div>
+
+    <form>
+      <!-- 1. ٹیکسٹ ان پٹ (نام کے لیے) -->
+      <label for="username">پورا نام:</label><br />
+      <input
+        type="text"
+        id="username"
+        placeholder="اپنا نام لکھیں"
+      /><br /><br />
+
+      <!-- 2. ای میل ان پٹ -->
+      <label for="useremail">ای میل ایڈریس:</label><br />
+      <input
+        type="email"
+        id="useremail"
+        placeholder="example@gmail.com"
+      /><br /><br />
+
+      <!-- 3. پاس ورڈ ان پٹ -->
+      <label for="userpass">پاس ورڈ:</label><br />
+      <input
+        type="password"
+        id="userpass"
+        placeholder="خفیہ پاس ورڈ"
+      /><br /><br />
+
+      <!-- 4. ریڈیو بٹن (جینڈر منتخب کرنے کے لیے) -->
+      <label>جنس:</label><br />
+      <input type="radio" id="male" name="gender" value="male" />
+      <label for="male">مرد</label>
+      <input type="radio" id="female" name="gender" value="female" />
+      <label for="female">عورت</label><br /><br />
+
+      <!-- 5. ڈراپ ڈاؤن لسٹ (شہر منتخب کرنے کے لیے) -->
+      <label for="city">شہر منتخب کریں:</label><br />
+      <select id="city">
+        <option value="lahore">لاہور</option>
+        <option value="karachi">کراچی</option>
+        <option value="islamabad">اسلام آباد</option></select
+      ><br /><br />
+
+      <!-- 6. سبمٹ بٹن -->
+      <button type="submit">فارم جمع کروائیں</button>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>
